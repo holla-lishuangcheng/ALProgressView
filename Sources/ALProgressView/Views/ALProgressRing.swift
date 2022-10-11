@@ -187,6 +187,7 @@ open class ALProgressRing: UIView {
         fill.toValue = value
         fill.duration = duration
         fill.timingFunction = timingFunction.function
+        fill.isRemovedOnCompletion = false
         CATransaction.setCompletionBlock(completion)
         ringLayer.add(fill, forKey: "fill")
         CATransaction.commit()
